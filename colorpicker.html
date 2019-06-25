@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
+  <link rel="stylesheet" href="colorpicker.css">
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -19,23 +19,82 @@
 
 </head>
 
+<script>
+ function randomColor() {
+   var red = Math.floor (Math.random() * 256);
+   var green = Math.floor (Math.random() * 256);
+   var blue = Math.floor (Math.random() * 256);
+
+   var divtoedit = document.getElementById('pickacolor');
+   divtoedit.style.backgroundColor = 'rgb('+red+','+green+','+blue+')';
+
+   document.getElementById('colorGenerated').innerHTML = 'rgb('+red+','+green+','+blue+')';
+
+  }
+
+</script>
+
+</head>
+
 <body>
 <body>
 
-  <div class="container-f;iod">
+  <div class="container-fluid">
     <div class=row>
       <div class="col-sm-12">
-      About Joyli
+      <span id="title">About Joyli
       </div>
     </div>
 
   </div class="row">
    <div clas="col-sm-12">
-     <img id=coverimg src="imgs/coverimg.jpg" alt="movie film">
+     <img id=coverimage src="imgs/coverimg.jpg" alt="movie film">
      <div>
    <div>
-     
-  <div>
+
+ <div>
+<div class="row">
+<div class="col-sm-6">
+<div class="halfrow">
+My favorite number: <br/>
+8
+</div>
+</div>
+
+<div class="col-sm-6">
+   <div class="halfrow">
+       My favorite song is: Lazy Song <br/>
+    <a href="https://www.youtube.com/watch?v=sLRtf41L12A" target=<_blank>
+     Bruno Mars - Lazy Song
+</a>
+</div>
+</div>
+
+</div>
+
+<div class="row">
+ <div class="col-sm-2 col-sm-offset-1 color" id="color1">
+ </div>
+ <div class="col-sm-2 color" id="color2">
+</div>
+ <div class="col-sm-2 color" id="color3">
+ </div>
+ <div class="col-sm-2 color" id="color4">
+ </div>
+ <div class="col-sm-2 color" id="color5">
+ </div>
+ </div>
+
+<div class="row">
+  <div class="col-sm-12" id="pickacolor">
+    <button class="btn btn-default" onclick=randomColor()>
+      Get Random color
+    </button>
+    <br/><br/>
+    <p id="colorGenerated"></p>
+  </div>
+</div>
+
 
 </body>
 </html>
